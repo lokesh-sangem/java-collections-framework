@@ -22,6 +22,21 @@ public class RemoveElementFromArrayListExample {
         System.out.println("The element is removed:"+isRemoved);
         System.out.println(programmingLanguages);
 
+        List<String>scriptingLanguages= new ArrayList<>();
+        scriptingLanguages.add("Python");
+        scriptingLanguages.add("Ruby");
+        scriptingLanguages.add("Perl");
 
+        boolean isRemovedAll=programmingLanguages.removeAll(scriptingLanguages);
+        System.out.println(isRemovedAll);
+
+        System.out.println(programmingLanguages);
+
+        boolean result=programmingLanguages.removeIf(element->element.startsWith("C"));
+        System.out.println(result);
+
+        System.out.println(programmingLanguages);
+        programmingLanguages.clear();
+        System.out.println(programmingLanguages);
     }
 }
